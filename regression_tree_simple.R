@@ -1,12 +1,12 @@
-##############################################################
-# Simple example for regression tree in R
+######################################################################
+# Simple example for regression tree and classification tree in R
 #
 # Adapted from:
 #   https://www.statmethods.net/advstats/cart.html
 #
 # install.packages("rpart")
 # install.packages("partykit")
-##############################################################
+#####################################################################
 
 ####################
 # Load library

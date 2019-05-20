@@ -5,17 +5,19 @@
 #   https://www.statmethods.net/advstats/cart.html
 #
 # install.packages("rpart")
+# install.packages("partykit")
 ##############################################################
 
 ####################
 # Load library
 ####################
 library(rpart)
+library(partykit)
 
 ####################
 # grow tree
 ####################
-fit <- rpart(Mileage~Price + Country + Reliability + Type,
+fit <- rpart(formula = Mileage ~ Price + Country + Reliability + Type,
              method="anova", data=cu.summary)
 
 printcp(fit) # display the results
@@ -43,3 +45,8 @@ post(fit, file = "tree.ps",
 
 
 
+
+
+fit <- ctree(formula = Mileage ~ Price + Country + Reliability + Type,
+             data = cu.summary)
+plot(fit)
